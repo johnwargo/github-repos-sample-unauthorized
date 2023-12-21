@@ -10,7 +10,11 @@ This repository includes a complete Eleventy site demonstrating the capability. 
 const githubAccount = 'johnwargo';
 ```
 
-Change the value in quotes to your GitHub account name then save your changes.
+Change the value in quotes to your GitHub account name then save your changes:
+
+```js
+const githubAccount = 'your-github-account-name';
+```
 
 Next, open a terminal window or command prompt, navigate to the cloned project folder, and execute the following commands:
 
