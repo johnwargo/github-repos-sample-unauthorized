@@ -1,4 +1,4 @@
-# Eleventy Display GitHub Repositories
+# Eleventy Display GitHub Repositories (no auth)
 
 Playing around with displaying all public repositories in my personal GitHub account in an Eleventy site.
 
