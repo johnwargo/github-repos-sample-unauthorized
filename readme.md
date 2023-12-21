@@ -48,13 +48,13 @@ Click the **Server** link that displays at the end of the build process and you 
 
 ![Sample Page](images/image-01.png)
 
+**Note:** Sample Page rendered using [MVP.css](https://andybrewer.github.io/mvp/).
+
 ## Usage
 
 To add this capability to an Eleventy site, simply copy the modified `repos.js` file to the Eleventy project's `_data` folder. With that in place, the Eleventy site has access to a `repos` data collection you can use to render data on any page in your site.
 
 The data collection has a lot of properties, open this URL in a browser to see them all: https://api.github.com/users/johnwargo/repos.
-
-Page data rendered in the demonstration site using [MVP.css](https://andybrewer.github.io/mvp/).
 
 ***
 
