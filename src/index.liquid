@@ -1,0 +1,22 @@
+---
+layout: default
+title: Eleventy Display GitHub Repositories
+---
+
+This page displays all of the repositories for the configured GitHub user account.
+
+{% if repos.length > 0 %}
+  <p>Number of Repositories: {{ repos.length }}</p>
+  <ul>
+  {% for repo in repos %}
+    <li>   
+      <a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a>
+      {% if repo.description.length > 0 %}
+        {{ repo.description }}
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>  
+{% else %}
+  <p>No category data to display</p>
+{% endif %}  
