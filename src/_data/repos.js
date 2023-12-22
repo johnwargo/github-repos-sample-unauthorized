@@ -12,8 +12,8 @@ module.exports = async function () {
     repoURL = `https://api.github.com/users/${githubAccount}/repos?per_page=100&page=${currentPage}`;
     console.log(`Fetching ${repoURL}`);
     var response = await fetch(repoURL);
+    var tempRes = await response.json();
     if (response.status == 200) {
-      var tempRes = await response.json();
       if (tempRes.length === 0) {
         done = true;
       } else {
@@ -21,8 +21,9 @@ module.exports = async function () {
         result = result.concat(tempRes);
       }
     } else {
-      console.error(`\nError: ${response.status} - ${response.statusText}`);
-      process. exit(1);
+      console.error(`\nError: ${response.status} - ${response.statusText}\n`);
+      if (tempRes.message) console.log(tempRes.message, tempRes.documentation_url);
+      process.exit(1);
     }
   }
   return result;
